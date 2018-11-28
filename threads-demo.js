@@ -5,7 +5,7 @@ const { chunk } = require('lodash');
 const data = Array(1000000)
     .fill(1000)
     .map(x => x * Math.random());
-const WORKERS_COUNT = 7;
+const WORKERS_COUNT = 70;
 const chunks = chunk(data, Math.floor(data.length / WORKERS_COUNT));
 
 const tryQuit = (results, WORKERS_COUNT) => {

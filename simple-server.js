@@ -1,7 +1,7 @@
 const http = require('http');
 const port = 3000;
 
-const meaninglessIteration = (el) => {
+const meaninglessIteration = () => {
     let el = 1;
     for (let i = 0; i < 10000; i++) {
         for (let n = 0; n < 10000; n++) {
@@ -12,7 +12,7 @@ const meaninglessIteration = (el) => {
 }
 
 const requestHandler = (request, response) => {
-    meaninglessIteration(i); // blocking operation
+    meaninglessIteration(); // blocking operation
     response.end('ok');
 }
 
